@@ -13,3 +13,5 @@ SOURCES += main.cpp
 RESOURCES += main.qrc
 
 OTHER_FILES += main.qml
+
+CONFIG += c++11
