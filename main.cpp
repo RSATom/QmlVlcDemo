@@ -10,9 +10,10 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
 
     QQuickView view;
+    view.setMinimumSize( QSize( 640, 480 ) );
     view.show();
-    view.setResizeMode( QQuickView::SizeViewToRootObject );
-    view.setSource( QStringLiteral( "qrc:/main.qml" ) );
+    view.setResizeMode( QQuickView::SizeRootObjectToView );
+    view.setSource( QStringLiteral( "qrc:/skin/basic_2.qml" ) );
 
     return app.exec();
 }
