@@ -19,11 +19,16 @@
 import QtQuick 2.1
 import QtQuick.Layouts 1.0
 import QmlVlc 0.1
+import QtMultimedia 5.0
 
 Rectangle {
     color: 'grey';
     VlcPlayer {
         id: vlcPlayer;
+        mrl: "http://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_480p_stereo.avi";
+    }
+    VlcMmPlayer {
+        id: vlcMmPlayer;
         mrl: "http://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_480p_stereo.avi";
     }
     VlcVideoSurface {
@@ -35,23 +40,12 @@ Rectangle {
         width: parent.width / 2 - anchors.leftMargin * 2;
         height: parent.height / 2 - anchors.topMargin * 2;
     }
-    VlcVideoSurface {
-        source: vlcPlayer;
-        anchors.top: parent.top;
-        anchors.topMargin: 10;
-        anchors.right: parent.right;
-        anchors.rightMargin: anchors.topMargin;
-        width: parent.width / 2 - anchors.rightMargin * 2;
-        height: parent.height / 2 - anchors.topMargin * 2;
-    }
-    VlcVideoSurface {
-        source: vlcPlayer;
-        anchors.bottom: parent.bottom;
-        anchors.bottomMargin: 10;
-        anchors.left: parent.left;
-        anchors.leftMargin: anchors.bottomMargin;
-        width: parent.width / 2 - anchors.leftMargin * 2;
-        height: parent.height / 2 - anchors.bottomMargin * 2;
+    VideoOutput {
+        source: vlcMmPlayer;
+        anchors.centerIn: parent;
+        width: parent.width / 2;
+        height: parent.height / 2;
+        opacity: 0.9;
     }
     VlcVideoSurface {
         source: vlcPlayer;
@@ -61,6 +55,7 @@ Rectangle {
         anchors.rightMargin: anchors.bottomMargin;
         width: parent.width / 2 - anchors.rightMargin * 2;
         height: parent.height / 2 - anchors.bottomMargin * 2;
+        opacity: 0.9;
     }
     MouseArea {
         hoverEnabled: true
