@@ -5,8 +5,12 @@ include(lib/QmlVlc/QmlVlc.pri)
 
 INCLUDEPATH += lib
 INCLUDEPATH += lib/vlc-2.1.3/sdk/include
+win32 {
+    LIBS += $$PWD/lib/vc-libvlc/libvlc.lib
+} else {
+    LIBS += -lvlc
+}
 
-LIBS += $$PWD/lib/vc-libvlc/libvlc.lib
 
 SOURCES += main.cpp
 
