@@ -10,6 +10,7 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
 
     QQuickView view;
+    view.setClearBeforeRendering( false );
     view.setMinimumSize( QSize( 640, 480 ) );
     view.show();
     view.setResizeMode( QQuickView::SizeRootObjectToView );
