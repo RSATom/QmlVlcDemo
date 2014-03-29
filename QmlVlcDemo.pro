@@ -1,6 +1,5 @@
 QT += qml quick multimedia
 
-include(lib/libvlc_wrapper/libvlc_wrapper.pri)
 include(lib/QmlVlc/QmlVlc.pri)
 
 INCLUDEPATH += lib
