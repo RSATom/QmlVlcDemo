@@ -7,7 +7,6 @@
 int main(int argc, char *argv[])
 {
     RegisterQmlVlc();
-    QmlVlcConfig::setNetworkCacheTime( 10 );
     QmlVlcConfig::enableAdjustFilter( true );
     QmlVlcConfig::enableMarqueeFilter( true );
     QmlVlcConfig::enableLogoFilter( true );
