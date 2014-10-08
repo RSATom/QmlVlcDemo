@@ -1,6 +1,6 @@
-[submodule "lib/QmlVlc"]
-	path = lib/QmlVlc
+[submodule "deps/QmlVlc"]
+	path = deps/QmlVlc
 	url = https://github.com/RSATom/QmlVlc.git
-[submodule "lib/libvlc-sdk"]
-	path = lib/libvlc-sdk
+[submodule "deps/libvlc-sdk"]
+	path = deps/libvlc-sdk
 	url = https://github.com/RSATom/libvlc-sdk.git

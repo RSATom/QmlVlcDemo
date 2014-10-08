@@ -1,11 +1,11 @@
 QT += qml quick multimedia
 
-include(lib/QmlVlc/QmlVlc.pri)
+include(deps/QmlVlc/QmlVlc.pri)
 
-INCLUDEPATH += lib
-INCLUDEPATH += lib/libvlc-sdk/include
+INCLUDEPATH += deps
+INCLUDEPATH += deps/libvlc-sdk/include
 win32 {
-    LIBS += $$PWD/lib/libvlc-sdk/lib/msvc/libvlc.lib
+    LIBS += $$PWD/deps/libvlc-sdk/lib/msvc/libvlc.lib
 } else {
     LIBS += -lvlc
 }
