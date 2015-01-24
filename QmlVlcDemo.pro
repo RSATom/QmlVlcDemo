@@ -10,7 +10,6 @@ win32 {
     LIBS += -lvlc
 }
 
-
 SOURCES += main.cpp
 
 RESOURCES += main.qrc
