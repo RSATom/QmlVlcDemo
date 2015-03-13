@@ -4,6 +4,7 @@
 *.vcxproj
 *.vcxproj.filters
 *.vcxproj.user
+*.suo
 GeneratedFiles/
 Win32/
 debug/
