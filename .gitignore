@@ -1,1 +1,10 @@
 *.pro.user
+*.sdf
+*.opensdf
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+GeneratedFiles/
+Win32/
+debug/
+release/
