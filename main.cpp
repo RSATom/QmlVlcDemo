@@ -32,10 +32,11 @@
 int main(int argc, char *argv[])
 {
     RegisterQmlVlc();
-    QmlVlcConfig::enableAdjustFilter( true );
-    QmlVlcConfig::enableMarqueeFilter( true );
-    QmlVlcConfig::enableLogoFilter( true );
-    QmlVlcConfig::enableDebug( true );
+    QmlVlcConfig& config = QmlVlcConfig::instance();
+    config.enableAdjustFilter( true );
+    config.enableMarqueeFilter( true );
+    config.enableLogoFilter( true );
+    config.enableDebug( true );
 
     QGuiApplication app(argc, argv);
 
