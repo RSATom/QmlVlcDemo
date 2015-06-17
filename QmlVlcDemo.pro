@@ -14,3 +14,7 @@ OTHER_FILES += \
     skin/play.png
 
 CONFIG += c++11
+
+macx {
+    LIBS += -L/Applications/VLC.app/Contents/MacOS/lib
+}
