@@ -34,10 +34,6 @@ Rectangle {
         id: vlcPlayer;
         mrl: "http://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_480p_stereo.avi";
     }
-    VlcMmPlayer {
-        id: vlcMmPlayer;
-        mrl: "http://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_480p_stereo.avi";
-    }
     VlcVideoSurface {
         source: vlcPlayer;
         anchors.top: parent.top;
@@ -48,7 +44,7 @@ Rectangle {
         height: parent.height / 2 - anchors.topMargin * 2;
     }
     VideoOutput {
-        source: vlcMmPlayer;
+        source: vlcPlayer;
         anchors.centerIn: parent;
         width: parent.width / 2;
         height: parent.height / 2;
